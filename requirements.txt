@@ -1,0 +1,6 @@
+bertviz==1.4.0
+datasets==2.1.0
+huggingface_hub==0.6.0
+numpy==1.21.2
+scipy==1.7.3
+transformers==4.19.2
