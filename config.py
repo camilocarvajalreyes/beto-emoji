@@ -22,7 +22,6 @@ def preprocess(text):
     return " ".join(new_text)
 
 def eval_text(text,model,tokenizer):
-    # retorna el indice del emoji con mas probabilidad y los scores
     text = preprocess(text)
     encoded_input = tokenizer(text, return_tensors='pt')
     output = model(**encoded_input)
@@ -46,7 +45,6 @@ with urllib.request.urlopen(mapping_link) as f:
 labels_en = [row[1] for row in csvreader if len(row) > 1]
 
 def rank_emojis_text(text,model,tokenizer,labels):
-    # imprime los emojis ordenados por probabilidad
     """if idioma in ['en','EN','us','US']:
         labels = labels_en
     elif idioma in ['es','ES']:
